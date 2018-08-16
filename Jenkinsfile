@@ -27,7 +27,7 @@ pipeline {
                 }
             }
             steps {
-                sh "table2qb exec cube-pipeline --input-csv out/tidydata2_6.csv --output-file out/observations.ttl --column-config metadata/columns.csv --dataset-name 'ONS LTIM Age and Sex' --base-uri http://gss-data.org.uk/ --dataset-slug ons-ltim-age-and-sex"
+                sh "table2qb exec cube-pipeline --input-csv out/tidydata2_7.csv --output-file out/observations.ttl --column-config metadata/columns.csv --dataset-name 'ONS LTIM Age and Sex' --base-uri http://gss-data.org.uk/ --dataset-slug ons-ltim-age-and-sex"
             }
         }
         stage('Upload draftset') {
