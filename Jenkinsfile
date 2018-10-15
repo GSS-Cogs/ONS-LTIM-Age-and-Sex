@@ -20,7 +20,7 @@ pipeline {
                 }
             }
             steps {
-                sh "jupyter-nbconvert --output-dir=out --execute 'Long-term international migration 2.07 Age and Sex.ipynb'"
+                sh "jupyter-nbconvert --output-dir=out --ExecutePreprocessor.timeout=None --execute 'Long-term international migration 2.07 Age and Sex.ipynb'"
             }
         }
         stage('Upload draftset') {
@@ -30,8 +30,9 @@ pipeline {
                     for (def file : findFiles(glob: 'out/*.csv')) {
                         csvs.add("out/${file.name}")
                     }
-                    uploadDraftset('ONS LTIM Age and Sex', csvs,
-                                   'https://github.com/ONS-OpenData/ref_migration/raw/master/columns.csv')
+                    uploadTidy(csvs,
+                               'https://github.com/ONS-OpenData/ref_migration/raw/master/columns.csv',
+                               'ONS LTIM Age and Sex')
                 }
             }
         }
