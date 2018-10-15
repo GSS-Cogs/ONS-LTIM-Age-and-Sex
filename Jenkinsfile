@@ -20,7 +20,7 @@ pipeline {
                 }
             }
             steps {
-                sh "jupyter-nbconvert --to python --stdout 'Long-term international migration 2.07 Age and Sex.ipynb' | ipython"
+                sh "jupyter-nbconvert --output-dir=out --execute 'Long-term international migration 2.07 Age and Sex.ipynb'"
             }
         }
         stage('Upload draftset') {
