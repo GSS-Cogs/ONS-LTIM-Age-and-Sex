@@ -2,10 +2,10 @@
   "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
   "tables": [
     {
-      "url": "https://ons-opendata.github.io/ref_migration/codelists/migration-directions.csv",
+      "url": "https://gss-cogs.github.io/ref_migration/codelists/migration-directions.csv",
       "tableSchema": "https://ons-opendata.github.io/ref_common/codelist-schema.json"
     }, {
-      "url": "https://ons-opendata.github.io/ref_common/codelists/age-groups.csv",
+      "url": "https://gss-cogs.github.io/ref_common/codelists/age-groups.csv",
       "tableSchema": "https://ons-opendata.github.io/ref_common/codelist-schema.json"
     }, {
       "url": "out/observations.csv",
@@ -67,13 +67,13 @@
         "foreignKeys": [{
           "columnReference": "flow",
           "reference": {
-            "resource": "https://ons-opendata.github.io/ref_migration/codelists/migration-directions.csv",
+            "resource": "https://gss-cogs.github.io/ref_migration/codelists/migration-directions.csv",
             "columnReference": "notation"
           }
         }, {
           "columnReference": "age",
           "reference": {
-            "resource": "https://ons-opendata.github.io/ref_common/codelists/age-groups.csv",
+            "resource": "https://gss-cogs.github.io/ref_common/codelists/age-groups.csv",
             "columnReference": "notation"
           }
         }],
