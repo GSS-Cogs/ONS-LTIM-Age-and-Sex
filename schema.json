@@ -3,10 +3,10 @@
   "tables": [
     {
       "url": "https://gss-cogs.github.io/ref_migration/codelists/migration-directions.csv",
-      "tableSchema": "https://ons-opendata.github.io/ref_common/codelist-schema.json"
+      "tableSchema": "https://gss-cogs.github.io/ref_common/codelist-schema.json"
     }, {
       "url": "https://gss-cogs.github.io/ref_common/codelists/age-groups.csv",
-      "tableSchema": "https://ons-opendata.github.io/ref_common/codelist-schema.json"
+      "tableSchema": "https://gss-cogs.github.io/ref_common/codelist-schema.json"
     }, {
       "url": "out/observations.csv",
       "tableSchema": {

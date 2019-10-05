@@ -15,7 +15,7 @@ pipeline {
         stage('Transform') {
             agent {
                 docker {
-                    image 'cloudfluff/databaker'
+                    image 'gsscogs/databaker'
                     reuseNode true
                 }
             }
@@ -26,7 +26,7 @@ pipeline {
         stage('Test') {
             agent {
                 docker {
-                    image 'cloudfluff/csvlint'
+                    image 'gsscogs/csvlint'
                     reuseNode true
                 }
             }
