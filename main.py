@@ -172,5 +172,6 @@ scraper.dataset.license = 'http://www.nationalarchives.gov.uk/doc/open-governmen
 with open(destinationFolder / 'dataset.trig', 'wb') as metadata:
     metadata.write(scraper.generate_trig())
 # -
-
+csvw = CSVWMetadata('https://gss-cogs.github.io/ref_migration/')
+csvw.create(destinationFolder / 'observations.csv', destinationFolder / 'observations.csv-schema.json')
 
