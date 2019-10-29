@@ -22,7 +22,7 @@ scraper = Scraper('https://www.ons.gov.uk/peoplepopulationandcommunity/populatio
 scraper
 # -
 
-tab = next(t for t in scraper.distribution(mediaType=Excel).as_databaker() if t.name == 'Table 2.07')
+tab = next(t for t in scraper.distribution(latest=True, mediaType=Excel).as_databaker() if t.name == 'Table 2.07')
 
 # +
 corner = tab.filter('Year')
